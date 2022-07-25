@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(LongInt)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(Rational examples_rational/main.cpp src/LongInt.hpp src/Conversation.cpp src/Compare.cpp src/Primitive.cpp src/Sum.cpp src/Subtraction.cpp src/Multiply.cpp src/Division.cpp src/Pow.cpp src/Factorial.cpp src/Gcd.cpp src/Lcm.cpp src/Isqrt.cpp src/Icbrt.cpp src/Random.cpp src/Rational.cpp)
+add_definitions(-Werror)
+add_definitions(-O3)
+find_package(Threads REQUIRED)
+target_link_libraries(Rational Threads::Threads)
